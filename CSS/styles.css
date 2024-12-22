@@ -1,0 +1,406 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f5f0;
+}
+
+header{
+  display: flex; /* Устанавливаем flex-контейнер */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+  justify-content: space-between; /* Распределяем пространство между элементами */
+
+  position: fixed; /* Закрепляет элемент */
+  top: 0; /* Расположение в верхней части экрана */
+  left: 0; /* Расположение у левого края */
+  width: 100%; /* Растянуть хэдер на всю ширину экрана */
+  height: 120px;
+  z-index: 1000; /* Устанавливает приоритет слоя, чтобы хэдер не перекрывался другим содержимым */
+  background-color: #1c1c1c; /* Фон, чтобы хэдер оставался читаемым */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+}
+
+.header-top {
+  display: flex; /* Элементы в этих контейнерах тоже выравниваются в строку */
+  align-items: center;
+  gap: 15px; /* Отступ между элементами */
+  padding-left: 15px;
+}
+
+.header-top .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.header-bottom{
+  padding-top: 10px;
+}
+
+.custom-input {
+  display: flex; /* Устанавливаем flex-контейнер для горизонтального расположения */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  border: 1px solid #1c1c1c; /* Граница */
+  border-radius: 30px; /* Закругленные углы */
+  padding: 5px 10px; /* Внутренние отступы */
+  background-color: #3b3935; /* Белый фон */
+  width: 100%; /* Занимает всю ширину родителя */
+  height: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.dropdown {
+  border: none; /* Убираем стандартную границу */
+  background: #3b3935; /* Прозрачный фон */
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  color: white;
+  outline: none; /* Убираем обводку при фокусе */
+  cursor: pointer; /* Указатель на стрелку выбора */
+  padding-left: 10px;
+}
+
+option {
+  background-color: black; /* Цвет фона опций */
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  color: white;
+  padding: 5px; /* Внутренний отступ */ 
+}
+
+.divider {
+  width: 1px; /* Толщина линии */
+  height: 24px; /* Высота линии */
+  background-color: #948d8d; /* Цвет линии */
+  margin: 0 10px; /* Отступы слева и справа */
+}
+
+.search-icon {
+  width: 16px; /* Ширина иконки */
+  height: 16px; /* Высота иконки */
+  margin-right: 10px; /* Отступ справа от иконки */
+}
+
+.input-field {
+  border: none; /* Убираем стандартную границу */
+  outline: none; /* Убираем обводку при фокусе */
+  flex: 1; /* Занимает оставшееся пространство */
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  color: white;
+  background: transparent; /* Прозрачный фон */
+}
+
+.nav-item {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.nav-link {
+  color: #c0c0c0;
+}
+
+.nav-link:visited {
+  color: #c0c0c0;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:active {
+  color: #c0c0c0;
+}
+
+
+
+.row {
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание */
+  flex-wrap: wrap;        /* Обеспечивает перенос карточек */
+  gap: 1rem;              /* Расстояние между карточками */
+  min-height: 50px;      /* Высота секции для вертикального центрирования */
+  margin-top: 120px;
+}
+
+#row_info{
+  justify-content: left;
+  padding-bottom: 50px;
+  margin-top: 10%;
+}
+
+.dark-header {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.logo .text-decoration-none{
+  color: #27ae60;
+}
+
+.search-icon {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  background-color: #219150;
+}
+
+.cta-button {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.cta-button:hover {
+  background-color: #219150;
+}
+
+.link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.text-decoration-none{
+  color:black;
+}
+
+.card{
+  border-radius: 30px;
+  border-width: 1px;
+  border-color: black;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.special {
+  order: 1; /* Изменяет порядок расположения карточки */
+  margin-top: 50px; /* Сдвиг вниз */
+}
+
+.card-title {
+  font-size: 24px; 
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  padding-top: 10px;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.card-text {
+  color: #555;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.card:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-text{
+  font-size: 18px;
+}
+
+.card:hover .card-title{
+  font-size: 25px;
+}
+
+#card_image{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+}
+
+#card_info{
+  height: 300px;
+  background-image: url(/field.jpg);
+  background-size: cover; /* Изображение заполняет весь экран */
+  background-repeat: no-repeat; /* Изображение не повторяется */
+  background-position: center; /* Центрирование изображения */
+}
+
+.card-info-text{
+  font-size: 70px;
+}
+
+.card-info-title{
+  font-size: 50px;
+}
+
+.footer-divider{
+  height: 1px;
+  background-color: #d8cfcf; /* Цвет линии */
+  margin-bottom: 30px;
+  margin-left: -400px;
+}
+
+.footer {
+  background-color: #f8f5f0;
+  color: #333;
+  padding: 40px 20px;
+  margin-left: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Секция логотипа и подписки */
+.footer-section {
+  flex: 1;
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #333;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #27ae60;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.subscribe-button {
+  padding: 0 15px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #1e8f4d;
+}
+
+.privacy-text {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #777;
+}
+
+.privacy-text a {
+  color: #333;
+  text-decoration: none;
+}
+
+.privacy-text a:hover {
+  text-decoration: underline;
+}
+
+/* Ссылки */
+.footer-links {
+  flex: 3;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.link-column h4 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.span-h4{
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.link-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-column ul li {
+  margin-bottom: 10px;
+}
+
+.link-column ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.link-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.google-ads {
+  position: fixed;
+  transform: translateY(120px);
+  width: 200px;
+  height: 100%;
+  z-index: 1000;
+}
+
+.left-ads {
+  left: 0;
+}
+
+.right-ads {
+  right: 0;
+}
+
+/* Уменьшаем видимость баннеров на маленьких экранах */
+@media (max-width: 768px) {
+  .google-ads {
+    display: none;
+  }
+}

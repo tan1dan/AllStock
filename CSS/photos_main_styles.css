@@ -1,0 +1,496 @@
+body {
+    margin-top: 0;
+    padding-top: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f0;
+  }
+  
+  header{
+    display: flex; /* Устанавливаем flex-контейнер */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+  
+    position: fixed; /* Закрепляет элемент */
+    top: 0; /* Расположение в верхней части экрана */
+    left: 0; /* Расположение у левого края */
+    width: 100%; /* Растянуть хэдер на всю ширину экрана */
+    height: 120px;
+    z-index: 1000; /* Устанавливает приоритет слоя, чтобы хэдер не перекрывался другим содержимым */
+    background-color: #1c1c1c; /* Фон, чтобы хэдер оставался читаемым */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+  }
+  
+  .header-top {
+    display: flex; /* Элементы в этих контейнерах тоже выравниваются в строку */
+    align-items: center;
+    gap: 15px; /* Отступ между элементами */
+    padding-left: 15px;
+  }
+  
+  .header-top .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  .header-bottom{
+    padding-top: 10px;
+  }
+  
+  .custom-input {
+    display: flex; /* Устанавливаем flex-контейнер для горизонтального расположения */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    border: 1px solid #1c1c1c; /* Граница */
+    border-radius: 30px; /* Закругленные углы */
+    padding: 5px 10px; /* Внутренние отступы */
+    background-color: #3b3935; /* Белый фон */
+    width: 100%; /* Занимает всю ширину родителя */
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+  }
+  
+  .dropdown {
+    border: none; /* Убираем стандартную границу */
+    background: #3b3935; /* Прозрачный фон */
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    color: white;
+    outline: none; /* Убираем обводку при фокусе */
+    cursor: pointer; /* Указатель на стрелку выбора */
+    padding-left: 10px;
+  }
+  
+  option {
+    background-color: black; /* Цвет фона опций */
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    color: white;
+    padding: 5px; /* Внутренний отступ */ 
+  }
+  
+  .divider {
+    width: 1px; /* Толщина линии */
+    height: 24px; /* Высота линии */
+    background-color: #948d8d; /* Цвет линии */
+    margin: 0 10px; /* Отступы слева и справа */
+  }
+  
+  .search-icon {
+    width: 16px; /* Ширина иконки */
+    height: 16px; /* Высота иконки */
+    margin-right: 10px; /* Отступ справа от иконки */
+  }
+  
+  .input-field {
+    border: none; /* Убираем стандартную границу */
+    outline: none; /* Убираем обводку при фокусе */
+    flex: 1; /* Занимает оставшееся пространство */
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    color: white;
+    background: transparent; /* Прозрачный фон */
+  }
+  
+  .nav-item {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+  }
+  
+  .nav-link {
+    color: #c0c0c0;
+  }
+  
+  .nav-link:visited {
+    color: #c0c0c0;
+  }
+  
+  .nav-link:hover {
+    color: white;
+  }
+  
+  .nav-link:active {
+    color: #c0c0c0;
+  }
+
+  .dark-header {
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+  }
+
+  .logo .text-decoration-none{
+    color: #27ae60;
+  }
+  
+  .search-icon {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .search-icon:hover {
+    background-color: #219150;
+  }
+  
+  .cta-button {
+    background-color: #27ae60;
+    color: #fff;
+  }
+  
+  .cta-button:hover {
+    background-color: #219150;
+  }
+  
+  .link {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    color: #fff;
+  }
+
+
+
+
+
+.row {
+    padding-top: 120px;
+    
+}
+
+.filter-menu {
+  width: 599px;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  gap:20px;
+  display: flex;
+  align-items: center;
+  top: 16px;
+  left: 16px;
+}
+
+.filter-menu h2 {
+  margin-top: 0;
+}
+
+.filter-menu label {
+  display: block;
+  
+}
+
+.filter-menu button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-menu button:hover {
+  background-color: #0056b3;
+}
+
+.pinterest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Автоматические колонки */
+  grid-auto-rows: 20px; /* Базовая высота строк */
+  gap: 20px; /* Расстояние между элементами */
+  padding: 20px;
+}
+
+.image-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Добавляем высоту элементов через автоматический grid */
+.image-wrapper img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Подгоняем элементы под высоту изображений */
+.image-wrapper {
+  grid-row-end: span 1; /* Начальное значение */
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto; /* Автоматическая высота */
+}
+
+/* Иконка скачать */
+.icon-download::before {
+  content: "⤓";
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* Hover эффект */
+.image-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.image-wrapper:hover .download-button {
+  opacity: 1;
+}
+
+/* Кнопка скачать */
+.download-button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  z-index: 10;
+  align-items: center;
+  padding-left: 15px;
+  gap: 8px;
+  height: 40px;
+  width: 40px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: calc(80vh - 60px); /* Reserve space for the button */
+  object-fit: contain; /* Ensure aspect ratio is maintained */
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: block;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+
+.footer-divider{
+    height: 1px;
+    background-color: #d8cfcf; /* Цвет линии */
+    margin-bottom: 30px;
+    margin-left: -400px;
+  }
+  
+  .footer {
+    background-color: #f8f5f0;
+    color: #333;
+    padding: 40px 20px;
+    margin-left: 200px;
+    font-family: Arial, sans-serif;
+    margin-top:70px;
+    
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* Секция логотипа и подписки */
+  .footer-section {
+    flex: 1;
+  }
+  
+  .footer-logo img {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #27ae60;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .subscribe-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  .subscribe-button {
+    padding: 0 15px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #1e8f4d;
+  }
+  
+  .privacy-text {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #777;
+  }
+  
+  .privacy-text a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .privacy-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ссылки */
+  .footer-links {
+    flex: 3;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  
+  .link-column h4 {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+  }
+  
+  .span-h4{
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+  }
+  
+  .link-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .link-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .link-column ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .link-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .google-ads {
+    position: fixed;
+    transform: translateY(120px);
+    width: 200px;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .left-ads {
+    left: 0;
+  }
+  
+  .right-ads {
+    right: 0;
+  }
+  
+  /* Уменьшаем видимость баннеров на маленьких экранах */
+  @media (max-width: 768px) {
+    .google-ads {
+      display: none;
+    }
+  }
