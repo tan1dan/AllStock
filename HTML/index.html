@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllStock</title>
+    <!-- Подключение Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="/CSS/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Левый баннер -->
+  <div class="google-ads left-ads">
+    <!-- Замените содержимое на код вашего Google AdSense -->
+    <img src="https://via.placeholder.com/200x1200" alt="Google Ads Left">
+  </div>
+  
+  <!-- Правый баннер -->
+  <div class="google-ads right-ads">
+    <!-- Замените содержимое на код вашего Google AdSense -->
+    <img src="https://via.placeholder.com/200x1200" alt="Google Ads Right">
+  </div>
+
+  <!-- Шапка сайта -->
+  <header>
+    <div>
+        <div class="header-top">
+          <div class="logo"><a href="#" class="text-decoration-none">AllStock</a></div>
+            <div class="custom-input">
+              <select class="dropdown" >
+                <option>Все элементы</option>
+                <option>Стоковое видео</option>
+                <option>Видео шаблоны</option>
+                <option>Музыка</option>
+                <option>Звуковые эффекты</option>
+                <option>Графические шаблоны</option>
+                <option>Графика</option>
+                <option>3D</option>
+                <option>Фотографии</option>
+                <option>Шрифты</option>
+              </select>
+              <div class="divider"></div>
+              <!--<img src="/search-icon.png" alt="Поиск" class="search-icon"> -->
+              <input type="text" placeholder="Поиск" class="input-field">
+            </div>
+        </div>
+        <div class="header-bottom">
+         <nav class="header-nav">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link">Стоковое видео</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Видео шаблоны</a></li>
+                <li class="nav-item"><a href="/HTML/music_main.html" class="nav-link">Музыка</a></li>
+                <li class="nav-item"><a href="/HTML/sounds_effect_main.html" class="nav-link">Звуковые эффекты</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Графические шаблоны</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Графика</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">3D</a></li>
+                <li class="nav-item"><a href="/HTML/photos_main.html" class="nav-link">Фотографии</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Шрифты</a></li>
+            </ul>
+         </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Основной контент -->
+  <main>
+    <section class="container py-4">
+      <!--
+      <div class="row g-2" id="row_info">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-12">
+          <div class="card" id="card_info">
+            <div class="card-body text-left">
+                <h5 class="card-info-title">Стоковое видео</h5>
+                <p class="card-info-text">6,9 млн+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+
+      <div class="row g-2">
+            <!-- Карточки -->
+          <div class="col-12 col-sm-3 col-md-4 col-lg-3 mb-4">
+            <a href="#" class="text-decoration-none">
+              <div class="card">
+                    
+                  <div class="card-body text-left">
+                      <h5 class="card-title">Стоковое видео</h5>
+                      <p class="card-text">6,9 млн+</p>
+                  </div>
+                  <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-3 col-md-4 col-lg-3 mb-4">
+            <a href="#" class="text-decoration-none">
+            <div class="card special">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">Видеошаблоны</h5>
+                    <p class="card-text">120 000+</p>
+                </div>
+                <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+            
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <a href="/HTML/photos_main.html" class="text-decoration-none">
+            <div class="card">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">Стоковые фотографии</h5>
+                    <p class="card-text">11,4 млн+</p>
+                </div>
+                <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <a href="/HTML/music_main.html" class="text-decoration-none">
+            <div class="card">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">Роялти-фри музыка</h5>
+                    <p class="card-text">220 000+</p>
+                </div>
+                <img src="/Resources/Photos/heatwaves.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <a href="/HTML/sounds_effect_main.html" class="text-decoration-none">
+            <div class="card special">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">Звуковые эффекты</h5>
+                    <p class="card-text">770 000+</p>
+                </div>
+                <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <a href="#" class="text-decoration-none">
+            <div class="card">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">Графические шаблоны</h5>
+                    <p class="card-text">330 000+</p>
+                </div>
+                <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <a href="#" class="text-decoration-none">
+            <div class="card">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">Шрифты</h5>
+                    <p class="card-text">58 000+</p>
+                </div>
+                <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <a href="#" class="text-decoration-none">
+            <div class="card special">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">Графика</h5>
+                    <p class="card-text">210 000+</p>
+                </div>
+                <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <a href="#" class="text-decoration-none">
+            <div class="card">
+                  
+                <div class="card-body text-left">
+                    <h5 class="card-title">3D</h5>
+                    <p class="card-text">290 000+</p>
+                </div>
+                <img src="/Resources/Photos/field.jpg" class="card-img-bottom" alt="Стоковое видео" id="card_image">
+            </div>
+            </a>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Подключение Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer class="footer">
+  <div class="footer-divider"></div>
+  <div class="footer-container">
+    <!-- Логотип и подписка -->
+    <div class="footer-section">
+      <div class="logo">AllStock</div>
+      <p>Укажите ваш алрес электронной почты и мы с вами свяжемся</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Ваш адрес электронной почты" class="subscribe-input">
+        <button type="submit" class="subscribe-button">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+      <!--  
+      <p class="privacy-text">
+        Отмените подписку в любое время. <a href="#">политикой конфиденциальности.</a>
+      </p>
+      -->
+    </div>
+
+    <!-- Ссылки -->
+    <div class="footer-links">
+      <div class="link-column">
+        <h4>Узнайте</h4>
+        <ul>
+          <li><a href="#">О <span class="span-h4">AllStock</span></a></li>
+          <li><a href="#">Стоковые видео</a></li>
+          <li><a href="#">Видео шаблоны</a></li>
+          <li><a href="/HTML/music_main.html">Музыка без лицензионных отчислений</a></li>
+          <li><a href="/HTML/photos_main.html">Стоковые фотографии</a></li>
+          <li><a href="#">Шрифты</a></li>
+        </ul>
+      </div>
+      <div class="link-column">
+        <h4>Лицензии и условия использования</h4>
+        <ul>
+          <li><a href="#">Условия лицензирования</a></li>
+          <li><a href="#">Правила использования</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Файлы cookie</a></li>
+          <li><a href="#">Настройки файлов cookie</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
